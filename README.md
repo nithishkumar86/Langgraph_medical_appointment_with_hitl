@@ -75,7 +75,41 @@ Database: PostgreSQL, Psycopg2
 Monitoring: LangSmith
 Email: SMTP (Gmail, SendGrid compatible)
 
-clone the Repository
+**clone the Repository**
 ```
-git clone 
+git clone https://github.com/nithishkumar86/Langgraph_medical_appointment_with_hitl.git
 ```
+
+**set up environment variables in your dot env file**
+```
+GROQ_API_KEY = ""
+LLM = "llama-3.3-70b-versatile"
+DATABASE_NAME = "Crewai"
+SENDER_EMAIL = ""
+SENDER_PASSWORD = ""
+
+
+LANGSMITH_API_KEY=""
+LANGSMITH_TRACING=true
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGCHAIN_PROJECT=MEDICAL APPOINTMENT USING LANGGRAPH
+```
+
+**create venv using uv**
+```
+uv venv
+```
+
+activate venv
+
+**install required library**
+```
+uv add -r requirements.txt
+```
+
+**run the file**
+```
+python main.py
+streamlit run streamlit app
+```
+
